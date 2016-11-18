@@ -1,13 +1,13 @@
-package com.example.tirza.soutetirza_pset3;
-
-import java.io.Serializable;
-
 /* Native App Studio: Assignment 3
  * Watch List
  * Tirza Soute
  *
  * This file creates the MovieData object.
  */
+
+package com.example.tirza.soutetirza_pset3;
+
+import java.io.Serializable;
 
 class MovieData implements Serializable {
     private String title;
@@ -17,7 +17,7 @@ class MovieData implements Serializable {
     private String actors;
     private String urlToPoster;
 
-    /** Create MovieData constructor */
+    /** Creates MovieData constructor */
     MovieData(String title, String plot, String year, String director, String actors,
               String urlToPoster) {
         this.title = title;

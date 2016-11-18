@@ -1,3 +1,10 @@
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
+ *
+ * This file uses the title that was given as input by the user to make a url request.
+ */
+
 package com.example.tirza.soutetirza_pset3;
 
 import java.io.BufferedReader;
@@ -7,17 +14,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/* Native App Studio: Assignment 3
- * Watch List
- * Tirza Soute
- *
- * This file uses the title that was given as input by the user to make a url request.
- */
-
-
 class HttpRequest {
 
-    /** Use the url that was given by the user to make a request to the OMDb API */
+    /** Uses the url that was given by the user to make a request to the OMDb API */
     static synchronized String downloadFromAPI(String... params) {
         String urlToApi = "http://www.omdbapi.com/?t=";
         String urlSettings = "&y=&plot=short&r=json";

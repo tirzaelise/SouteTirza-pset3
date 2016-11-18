@@ -22,8 +22,9 @@ public class UserInput extends AppCompatActivity {
         setContentView(R.layout.activity_user_input);
     }
 
-    /** If input was given, replace the spaces by the space character and start searching for
-      * data */
+    /**
+     * Replaces the spaces by the space character and starts searching for data if input was given
+     */
     public void searchTitle(View view) {
         EditText userInput = (EditText) findViewById(R.id.titleInput);
         String title = userInput.getText().toString();
@@ -38,7 +39,7 @@ public class UserInput extends AppCompatActivity {
         }
     }
 
-    /** Pass the MovieData object to the next activity to show the search results to the user  */
+    /** Passes the MovieData object to the next activity to show the search results to the user  */
     public void setData(MovieData movieData) {
         Intent goToResult = new Intent(this, ShowResult.class);
         Bundle extras = new Bundle();
@@ -47,7 +48,7 @@ public class UserInput extends AppCompatActivity {
         startActivity(goToResult);
     }
 
-    /** If the button is clicked, go to the Watch List activity to show the user his watch list */
+    /** Goes to the Watch List activity to show the user his watch list, if the button is clicked */
     public void showSaved(View view) {
         Intent goToWatchList = new Intent(this, WatchList.class);
         startActivity(goToWatchList);

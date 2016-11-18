@@ -1,3 +1,10 @@
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
+ *
+ * This file uses the data that was received from the HttpRequest file to create a MovieData object.
+ */
+
 package com.example.tirza.soutetirza_pset3;
 
 import android.content.Context;
@@ -7,29 +14,22 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* Native App Studio: Assignment 3
- * Watch List
- * Tirza Soute
- *
- * This file uses the data that was received from the HttpRequest file to create a MovieData object.
- */
-
 class MovieAsyncTask extends AsyncTask<String, String, String> {
     private UserInput activity;
     private Context context;
 
-    /** Create a MovieAsyncTask constructor */
+    /** Creates a MovieAsyncTask constructor */
     MovieAsyncTask(UserInput activity) {
         this.activity = activity;
         this.context = this.activity.getApplicationContext();
     }
 
-    /** Receive the data that was obtained with the HttpRequest file */
+    /** Receives the data that was obtained with the HttpRequest file */
     protected String doInBackground(String... params) {
         return HttpRequest.downloadFromAPI(params);
     }
 
-    /** Create a MovieData object */
+    /** Creates a MovieData object */
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         String title = "";

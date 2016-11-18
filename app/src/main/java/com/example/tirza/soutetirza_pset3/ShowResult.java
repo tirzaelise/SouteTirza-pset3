@@ -1,3 +1,10 @@
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
+ *
+ * This file shows the obtained results to the user.
+ */
+
 package com.example.tirza.soutetirza_pset3;
 
 import android.content.Context;
@@ -9,13 +16,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-/* Native App Studio: Assignment 3
- * Watch List
- * Tirza Soute
- *
- * This file shows the obtained results to the user.
- */
 
 public class ShowResult extends AppCompatActivity {
     MovieData movieData;
@@ -30,7 +30,7 @@ public class ShowResult extends AppCompatActivity {
         showData();
     }
 
-    /** Show the data to the user */
+    /** Shows the data to the user */
     public void showData() {
         // Get all the obtained data
         String title = movieData.getTitle();
@@ -71,7 +71,7 @@ public class ShowResult extends AppCompatActivity {
         }
     }
 
-    /** Save the movie to shared preferences if the save button is clicked */
+    /** Saves the movie to shared preferences if the save button is clicked */
     public void saveMovie(View view) {
         String title = movieData.getTitle();
         SharedPreferences sharedPrefs = this.getSharedPreferences("watchList",

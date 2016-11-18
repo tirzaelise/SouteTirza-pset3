@@ -1,3 +1,11 @@
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
+ *
+ * This file shows the watch list to the user.
+ */
+
+
 package com.example.tirza.soutetirza_pset3;
 
 import android.content.Context;
@@ -15,14 +23,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Map;
 
-/* Native App Studio: Assignment 3
- * Watch List
- * Tirza Soute
- *
- * This file shows the watch list to the user.
- */
-
-
 public class WatchList extends AppCompatActivity {
     ListView listView;
 
@@ -37,7 +37,7 @@ public class WatchList extends AppCompatActivity {
         createWatchList(savedMovies);
     }
 
-    /** Get the movies that are saved in the user's shared preferences and save them in an
+    /** Gets the movies that are saved in the user's shared preferences and saves them in an
       * ArrayList */
     public ArrayList<String> getSavedMovies(SharedPreferences sharedPrefs) {
         Map<String, ?> keys = sharedPrefs.getAll();
@@ -51,7 +51,7 @@ public class WatchList extends AppCompatActivity {
         return savedMovies;
     }
 
-    /** Create a ListView that holds the saved movies */
+    /** Creates a ListView that holds the saved movies */
     public void createWatchList(ArrayList<String> savedMovies) {
         listView = (ListView) findViewById(R.id.listView);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.row_view,
@@ -59,8 +59,9 @@ public class WatchList extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
-    /** Delete the movie from the watch list if the delete button is clicked and restart the current
-     *  activity to refresh the watch list */
+    /**
+     * Deletes the movie from the watch list if the delete button is clicked and restarts the
+     * current activity to refresh the watch list */
     public void deleteSaved(View view) {
         // Find out what movie was clicked
         RelativeLayout layout = (RelativeLayout) view.getParent();
