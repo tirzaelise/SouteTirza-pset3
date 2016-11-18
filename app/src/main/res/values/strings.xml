@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SouteTirza-pset3</string>
+    <string name="welcome">Welcome to Watch List! This app will help you remember what movies you want to watch. Search for the title of the movie you want to add to your Watch List and click on the button below.</string>
+    <string name="search">Search</string>
+    <string name="title">Title</string>
+    <string name="plot">Plot</string>
+    <string name="year">Year</string>
+    <string name="director">Director</string>
+    <string name="actors">Actors</string>
+    <string name="noResults">No results were found</string>
+    <string name="save">Save</string>
+    <string name="watchList">Watch List</string>
+    <string name="watchListView">View watch list</string>
+</resources>
