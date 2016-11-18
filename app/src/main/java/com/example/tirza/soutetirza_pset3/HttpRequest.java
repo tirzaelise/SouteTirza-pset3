@@ -7,11 +7,13 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * This file uses the title that was given as input by the user to make a url request.
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
  *
- * Native App Studio, Tirza Soute
+ * This file uses the title that was given as input by the user to make a url request.
  */
+
 
 class HttpRequest {
 
@@ -32,25 +34,24 @@ class HttpRequest {
             return result;
         }
 
-        // Try to make a connection using the given url
+        // Try to make a connection using the url
         HttpURLConnection connection;
-        if (url != null) {
-            try {
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                Integer responseCode = connection.getResponseCode();
-                if (200 >= responseCode && responseCode <= 299) {
-                    InputStreamReader input = new InputStreamReader(connection.getInputStream());
-                    BufferedReader br = new BufferedReader(input);
-                    String line;
-                    // Read the data on the website
-                    while ((line = br.readLine()) != null) {
-                        result = result + line;
-                    }
+        try {
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            Integer responseCode = connection.getResponseCode();
+            if (200 >= responseCode && responseCode <= 299) {
+                // Create a BufferedReader that reads the page content
+                InputStreamReader input = new InputStreamReader(connection.getInputStream());
+                BufferedReader br = new BufferedReader(input);
+                String line;
+                // Read the data on the website
+                while ((line = br.readLine()) != null) {
+                    result = result + line;
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return result;
     }

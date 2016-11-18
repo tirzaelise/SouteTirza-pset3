@@ -11,4 +11,7 @@
     <string name="save">Save</string>
     <string name="watchList">Watch List</string>
     <string name="watchListView">View watch list</string>
+    <string name="posterDesc">Poster of the requested movie</string>
+    <string name="eyeDesc">Button that leads the user to his watch list</string>
+    <string name="binDesc">Button that deletes the selected movie from watch list</string>
 </resources>

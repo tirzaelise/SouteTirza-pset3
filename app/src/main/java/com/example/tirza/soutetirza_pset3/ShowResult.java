@@ -10,12 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * This file shows the obtained results to the user.
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
  *
- * Native App Studio, Tirza Soute
+ * This file shows the obtained results to the user.
  */
-
 
 public class ShowResult extends AppCompatActivity {
     MovieData movieData;
@@ -49,7 +49,7 @@ public class ShowResult extends AppCompatActivity {
         TextView noResultsView = (TextView) findViewById(R.id.noResults);
         Button saveMovieButton = (Button) findViewById(R.id.saveMovie);
 
-        // If there were results obtained, show them to the user
+        // If results were obtained, show them to the user
         if (!title.isEmpty()) {
             plotView.setText(plot);
             yearView.setText(year);
@@ -58,7 +58,7 @@ public class ShowResult extends AppCompatActivity {
             PosterAsyncTask asyncTask = new PosterAsyncTask(this);
             asyncTask.execute(urlToPoster);
             titleView.setText(title);
-        // If no results were obtained, hide the image and text views and the save button
+        // If no results were obtained, hide the poster image view, text views and the save button
         } else {
             noResultsView.setVisibility(View.VISIBLE);
             titleView.setVisibility(View.GONE);

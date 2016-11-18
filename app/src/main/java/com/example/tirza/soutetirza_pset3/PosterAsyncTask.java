@@ -7,11 +7,12 @@ import android.widget.ImageView;
 
 import java.io.InputStream;
 
-/**
- * This file uses the URL to the poster that is saved in the MovieData object to create a Bitmap
- * image and sets this in the image view for the poster.
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
  *
- * Native App Studio, Tirza Soute
+ * This file uses the URL to the poster that is saved in the MovieData object to create a Bitmap
+ * image. This image is set in the image view for the poster.
  */
 
 class PosterAsyncTask extends AsyncTask<String, Void, Bitmap> {

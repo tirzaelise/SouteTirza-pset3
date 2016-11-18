@@ -63,6 +63,7 @@
         android:layout_alignParentStart="true"
         android:onClick="showSaved"
         android:background="@null"
+        android:contentDescription="@string/eyeDesc"
         android:id="@+id/watchListButton" />
 
     <Button

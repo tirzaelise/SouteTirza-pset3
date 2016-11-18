@@ -7,11 +7,11 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * This file uses the data data that was received from the HttpRequest file to create a MovieData
- * object.
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
  *
- * Native App Studio, Tirza Soute
+ * This file uses the data that was received from the HttpRequest file to create a MovieData object.
  */
 
 class MovieAsyncTask extends AsyncTask<String, String, String> {
@@ -24,12 +24,7 @@ class MovieAsyncTask extends AsyncTask<String, String, String> {
         this.context = this.activity.getApplicationContext();
     }
 
-//    I deleted this, because I thought it was redundant.
-//    protected void onPreExecute() {
-//        Toast.makeText(context, "Getting data from server", Toast.LENGTH_LONG).show();
-//    }
-
-    /** Receive the data that was obtained using the HttpRequest file */
+    /** Receive the data that was obtained with the HttpRequest file */
     protected String doInBackground(String... params) {
         return HttpRequest.downloadFromAPI(params);
     }

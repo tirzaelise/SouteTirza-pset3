@@ -16,6 +16,7 @@
         android:layout_marginTop="58dp"
         android:id="@+id/deleteButton"
         android:onClick="deleteSaved"
+        android:contentDescription="@string/binDesc"
         android:background="@null"/>
 
     <TextView

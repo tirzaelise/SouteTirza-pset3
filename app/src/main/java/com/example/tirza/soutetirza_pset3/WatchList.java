@@ -15,11 +15,13 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Map;
 
-/**
- * This file shows the watch list to the user.
+/* Native App Studio: Assignment 3
+ * Watch List
+ * Tirza Soute
  *
- * Native App Studio, Tirza Soute
+ * This file shows the watch list to the user.
  */
+
 
 public class WatchList extends AppCompatActivity {
     ListView listView;
@@ -36,7 +38,7 @@ public class WatchList extends AppCompatActivity {
     }
 
     /** Get the movies that are saved in the user's shared preferences and save them in an
-     *  ArrayList*/
+      * ArrayList */
     public ArrayList<String> getSavedMovies(SharedPreferences sharedPrefs) {
         Map<String, ?> keys = sharedPrefs.getAll();
         ArrayList<String> savedMovies = new ArrayList<>();
@@ -62,7 +64,7 @@ public class WatchList extends AppCompatActivity {
     public void deleteSaved(View view) {
         // Find out what movie was clicked
         RelativeLayout layout = (RelativeLayout) view.getParent();
-        TextView textView = (TextView) layout.getChildAt(0);
+        TextView textView = (TextView) layout.getChildAt(1);
         String selectedMovie = textView.getText().toString();
         // Delete clicked movie from watch list
         SharedPreferences sharedPrefs = this.getSharedPreferences("watchList",
@@ -73,5 +75,5 @@ public class WatchList extends AppCompatActivity {
         Intent currentIntent = getIntent();
         finish();
         startActivity(currentIntent);
-}
+    }
 }
